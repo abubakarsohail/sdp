@@ -1,5 +1,6 @@
 
-
+// Interface that provides the basis of fly behavior
+// all the child classes implement their own way of flying 
 interface FlyBehavior
 {
     fly(): void;
@@ -28,6 +29,9 @@ class FlyRocketPowered implements FlyBehavior
         console.log('I’m flying with a rocket!');
     }
 }
+
+// Interface that provides the basis of quack behavior
+// all the child classes implement their own way of quacking
 
 interface QuackBehavior
 {
@@ -58,6 +62,9 @@ class Squeak implements QuackBehavior
     }
 }
 
+// Abstract duck class that has the common properties and methods
+// for all the child classes. However, each child class should 
+// know how to display itself
 abstract class Duck
 {
     protected flyBehavior: FlyBehavior;

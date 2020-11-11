@@ -7,6 +7,9 @@ import {Duck, MallardDuck, ModelDuck, FlyRocketPowered} from './Simuduck';
 
 function App() {
 
+    // A sample program to check the strategy of our pattern
+    // We can change fly or quack behaviors of the ducks at run
+    // time
     let mallard: Duck = new MallardDuck();
     mallard.performQuack();
     mallard.performFly();
